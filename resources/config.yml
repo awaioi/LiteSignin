@@ -1,0 +1,75 @@
+# LiteSignin 配置文件
+
+# 签到设置
+settings:
+  # 是否启用签到消息提示
+  enable_signin_message: true
+  
+  # 签到成功消息
+  signin_message: "§a[LiteSignin] §f签到成功！奖励已发放。"
+  
+  # 是否启用GUI界面
+  enable_gui: true
+
+# 奖励设置
+rewards:
+  # 物品奖励
+  items:
+    # 是否启用物品奖励
+    enabled: true
+    
+    # 物品列表
+    list:
+      # 示例: 给予钻石 (固定数量)
+      - material: DIAMOND
+        amount: 1
+        
+      # 示例: 给予金锭 (随机数量范围)
+      - material: GOLD_INGOT
+        amount_range:
+          min: 1
+          max: 10
+  
+  # 经济奖励
+  money:
+    # 是否启用经济奖励
+    enabled: true
+    
+    # 固定金额示例
+    amount: 100.0
+    
+    # 随机金额范围示例 (注释掉固定金额后启用此项)
+    #amount_range:
+    #  min: 50.0
+    #  max: 200.0
+    
+    # 货币名称
+    currency: "金币"
+    
+    # 使用的经济插件 (vault, essentials, etc)
+    economy_plugin: "vault"
+
+# 数据存储设置
+database:
+  # 存储类型 (sqlite, mysql)
+  type: "sqlite"
+  
+  # SQLite 设置
+  sqlite:
+    path: "signin_data.db"
+  
+  # MySQL 设置 (如果使用MySQL)
+  mysql:
+    host: "localhost"
+    port: 3306
+    database: "litesignin"
+    username: "root"
+    password: "password"
+
+# 高级设置
+advanced:
+  # 是否记录详细日志
+  debug_logging: true
+  
+  # 是否启用烟花效果
+  enable_firework: true

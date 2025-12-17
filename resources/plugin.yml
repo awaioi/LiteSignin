@@ -1,0 +1,25 @@
+name: LiteSignin
+version: '${project.version}'
+main: org.awaioi.litesignin.LiteSignin
+api-version: '1.21'
+author: YourName
+description: 每日签到插件，支持自动签到和可配置奖励
+website: https://github.com/yourname/LiteSignin
+
+commands:
+  signin:
+    description: 手动签到命令
+    usage: /signin
+    aliases: [qd, sign]
+  sigui:
+    description: 打开签到GUI界面
+    usage: /sigui
+    aliases: [sgui, signgui]
+
+permissions:
+  litesignin.admin:
+    description: 管理员权限
+    default: op
+  litesignin.use:
+    description: 使用签到功能的权限
+    default: true
